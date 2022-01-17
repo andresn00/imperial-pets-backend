@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "alarms",
+  "info": {
+    "singularName": "alarm",
+    "pluralName": "alarms",
+    "displayName": "alarm",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "days": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::day.day",
+      "inversedBy": "alarms"
+    },
+    "dispenser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::dispenser.dispenser",
+      "inversedBy": "alarms"
+    }
+  }
+}

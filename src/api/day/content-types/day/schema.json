@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "days",
+  "info": {
+    "singularName": "day",
+    "pluralName": "days",
+    "displayName": "day"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday",
+        "sunday"
+      ]
+    },
+    "alarms": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::alarm.alarm",
+      "inversedBy": "days"
+    }
+  }
+}
