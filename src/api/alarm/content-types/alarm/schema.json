@@ -16,17 +16,11 @@
       "type": "time",
       "required": true
     },
-    "days": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::day.day",
-      "inversedBy": "alarms"
-    },
     "dispenser": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::dispenser.dispenser",
-      "inversedBy": "alarms"
+      "inversedBy": "alarms_ref"
     }
   }
 }

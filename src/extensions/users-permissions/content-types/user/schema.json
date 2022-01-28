@@ -67,7 +67,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::dispenser.dispenser",
-      "inversedBy": "users"
+      "mappedBy": "users"
     }
   }
 }

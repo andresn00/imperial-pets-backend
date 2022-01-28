@@ -4,7 +4,8 @@
   "info": {
     "singularName": "dispenser",
     "pluralName": "dispensers",
-    "displayName": "dispenser"
+    "displayName": "dispenser",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,7 +20,7 @@
     "name": {
       "type": "string"
     },
-    "alarms": {
+    "alarms_ref": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::alarm.alarm",
@@ -30,6 +31,10 @@
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "inversedBy": "dispensers"
+    },
+    "alarms": {
+      "type": "json",
+      "required": true
     }
   }
 }
