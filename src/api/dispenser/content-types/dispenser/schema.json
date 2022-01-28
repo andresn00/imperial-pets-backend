@@ -34,7 +34,7 @@
     },
     "alarms": {
       "type": "json",
-      "required": true
+      "required": false
     }
   }
 }
